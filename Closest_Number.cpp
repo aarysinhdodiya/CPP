@@ -5,46 +5,28 @@
  using namespace std;
  
  int main(){
-     int n, m,a;
+     int n, m;
      cout << "Enter value of m:";
      cin >> m;
  
      cout << "Enter value of n:";
      cin >> n;
-    if (n<0){
-        for(int i = -1; i >= n-m; i--){
-            if(i % m == 0){
-               if(i >= n){
-                   a = i;
-               }
-               else if(i < n){
-                   if((n - a) > (i - n)){
-                       cout << a;
-                   }
-                   else{
-                       cout << i;
-                   }
-               }
-           }
-       }
-    }
-    else{
 
-     for(int i = m; i <= m + n; i++){
-         if(i % m == 0){
-            if(i <= n){
-                a = i;
-            }
-            else if(i > n){
-                if((n - a) < (i - n)){
-                    cout << a;
-                }
-                else{
-                    cout << i;
-                }
-            }
-        }
-    }
-}
+     int Num = (n/m) * m;
+     int Num1 = Num;
+     Num += m;
+
+     int Num2 = n - Num;
+     int Num3 = Num - n;
+
+     if(Num2 > Num3){
+        cout << Num;
+     }
+     else if(Num2 = Num3){
+        cout << Num;
+     }
+     else{
+        cout << Num1;
+     }
      return 0;
  }
